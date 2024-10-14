@@ -1,4 +1,5 @@
 import 'package:ds_web/widgets/HomeScreen/AnimatedInfo.dart';
+import 'package:ds_web/widgets/HomeScreen/Captions.dart';
 import 'package:ds_web/widgets/HomeScreen/HomeCarousel.dart';
 import 'package:ds_web/widgets/Navbar.dart';
 import 'package:ds_web/widgets/HomeScreen/SpecialThanking.dart';
@@ -68,7 +69,11 @@ class HomePage extends StatelessWidget {
   void populate() {
     int index = 0;
     for (final item in details) {
-      detailsWidget.add(CkSlideTransition(index: index, data: details[index]));
+      detailsWidget.add(CkSlideTransition(
+          index: index,
+          child: Captions(
+            data: details[index],
+          )));
       detailsWidget.add(const SizedBox(
         height: 50,
       ));
