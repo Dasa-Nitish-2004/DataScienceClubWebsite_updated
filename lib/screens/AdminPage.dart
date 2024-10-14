@@ -1,3 +1,4 @@
+import 'package:ds_web/widgets/Navbar.dart';
 import 'package:flutter/material.dart';
 
 class AdminPage extends StatefulWidget {
@@ -10,6 +11,13 @@ class AdminPage extends StatefulWidget {
 class _AdminPageState extends State<AdminPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    print(MediaQuery.of(context).size.width);
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Navbar(),
+        ],
+      ),
+    );
   }
 }

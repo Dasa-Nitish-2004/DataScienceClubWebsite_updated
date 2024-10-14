@@ -12,40 +12,50 @@ class _NavbarState extends State<Navbar> {
   List<bool> ishovered = [false, false, false, false, false];
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Container(
       height: 60,
       color: Color.fromRGBO(33, 37, 41, 1), // Keep AppBar transparent
       // color: Colors.amber, // Keep AppBar transparent
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          SizedBox(
-            width: 20,
-          ),
-          Container(
-            height: 40,
-            width: 40,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                image: AssetImage("assets/images/clublogo.png"),
-              ),
+      child: width > 600
+          ? Row(
+              // mainAxisAlignment: MainAxisAlignment.end,
+              children: _supportNavbar(),
+            )
+          : ListView(
+              children: _supportNavbar(),
+              scrollDirection: Axis.horizontal,
             ),
-          ),
-          Spacer(),
-          NavbarItem(0, "Home"),
-          const SizedBox(width: 20), // Spacing to the right edge
-          NavbarItem(1, "About_us"),
-          const SizedBox(width: 20), // Spacing to the right edge
-          NavbarItem(2, "Events"),
-          const SizedBox(width: 20), // Spacing to the right edge
-          NavbarItem(3, "Members"),
-          const SizedBox(width: 20), // Spacing to the right edge
-          NavbarItem(4, "Admin"),
-          const SizedBox(width: 20), // Spacing to the right edge
-        ],
-      ),
     );
+  }
+
+  List<Widget> _supportNavbar() {
+    return [
+      SizedBox(
+        width: 20,
+      ),
+      Container(
+        height: 40,
+        width: 40,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          image: DecorationImage(
+            image: AssetImage("assets/images/clublogo.png"),
+          ),
+        ),
+      ),
+      Spacer(),
+      NavbarItem(0, "Home"),
+      const SizedBox(width: 20), // Spacing to the right edge
+      NavbarItem(1, "About_us"),
+      const SizedBox(width: 20), // Spacing to the right edge
+      NavbarItem(2, "Events"),
+      const SizedBox(width: 20), // Spacing to the right edge
+      NavbarItem(3, "Members"),
+      const SizedBox(width: 20), // Spacing to the right edge
+      NavbarItem(4, "Admin"),
+      const SizedBox(width: 20), // Spacing to the right edge
+    ];
   }
 
   Widget NavbarItem(int index, String itemName) {

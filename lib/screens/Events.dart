@@ -1,3 +1,4 @@
+import 'package:ds_web/widgets/Navbar.dart';
 import 'package:flutter/material.dart';
 
 class EventsPage extends StatefulWidget {
@@ -8,8 +9,15 @@ class EventsPage extends StatefulWidget {
 }
 
 class _EventsPageState extends State<EventsPage> {
+  List<Map<String, String>> Events = [];
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Navbar(),
+        ],
+      ),
+    );
   }
 }
