@@ -68,10 +68,12 @@ class MembersPage extends StatelessWidget {
   Widget build(BuildContext context) {
     _populateMembers();
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [Navbar(), ...membersWidgets],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [Navbar(), ...membersWidgets],
+          ),
         ),
       ),
     );

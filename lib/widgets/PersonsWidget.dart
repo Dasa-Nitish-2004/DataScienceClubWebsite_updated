@@ -56,9 +56,9 @@ class PersonProfile extends StatelessWidget {
                 ContactSvgsRow(
                   details: person,
                 ),
-                SizedBox(
-                  height: 5,
-                ),
+                // SizedBox(
+                //   height: 5,
+                // ),
               ],
             ),
           ),
