@@ -137,7 +137,6 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    print(width); // 840
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(

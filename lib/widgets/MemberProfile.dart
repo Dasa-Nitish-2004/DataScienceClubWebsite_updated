@@ -129,7 +129,6 @@ class MemberProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width; // 800 mobile view
-    print(width);
     return width > 800
         ? Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,

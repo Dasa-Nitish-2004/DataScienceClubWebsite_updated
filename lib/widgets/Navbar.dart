@@ -15,6 +15,7 @@ class _NavbarState extends State<Navbar> {
     double width = MediaQuery.of(context).size.width;
     return Container(
       height: 60,
+      // color: Colors.transparent,
       color: Color.fromRGBO(33, 37, 41, 1), // Keep AppBar transparent
       // color: Colors.amber, // Keep AppBar transparent
       child: width > 600

@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "427528672554",
+    "firebase_url": "https://testingcli-35011-default-rtdb.firebaseio.com",
+    "project_id": "testingcli-35011",
+    "storage_bucket": "testingcli-35011.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427528672554:android:269cd69c014c140f0b3a53",
+        "android_client_info": {
+          "package_name": "com.JntuDataScienceClub.firebase_tutorials"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxEPLcf4jJpx7uhYEro8YC2GClTV8E9uY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427528672554:android:bc40424f173217a40b3a53",
+        "android_client_info": {
+          "package_name": "com.example.ds_web"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxEPLcf4jJpx7uhYEro8YC2GClTV8E9uY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

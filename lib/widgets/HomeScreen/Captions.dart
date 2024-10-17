@@ -8,7 +8,6 @@ class Captions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    print(width);
     return width > 1050
         ? Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
