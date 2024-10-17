@@ -1,5 +1,6 @@
 import 'package:ds_web/widgets/Navbar.dart';
 import 'package:ds_web/widgets/animaterImage.dart';
+import 'package:ds_web/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -138,6 +139,7 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
+      drawer: openedDrawer(context),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

@@ -1,6 +1,7 @@
 import 'package:ds_web/screens/EventCreation.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class EventOutlook extends StatefulWidget {
   final Map<String, Object> map;
@@ -240,8 +241,7 @@ class _EventOutlookState extends State<EventOutlook> {
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              Icon(IconData(0xe21a,
-                                  fontFamily: 'MaterialIcons')),
+                              Icon(Icons.edit),
                               SizedBox(
                                 width: 10,
                               ),
@@ -249,7 +249,15 @@ class _EventOutlookState extends State<EventOutlook> {
                             ],
                           ))
                       : ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            // context.go(
+                            //     "/reg/${widget.map["name"]}?desc=${widget.map["description"]}");
+                            context.go(Uri(
+                                path: "/reg/${widget.map["name"]}",
+                                queryParameters: {
+                                  'desc': widget.map["description"]
+                                }).toString());
+                          },
                           style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),

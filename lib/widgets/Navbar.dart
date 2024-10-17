@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:go_router/go_router.dart';
 
 class Navbar extends StatefulWidget {
@@ -10,22 +11,45 @@ class Navbar extends StatefulWidget {
 
 class _NavbarState extends State<Navbar> {
   List<bool> ishovered = [false, false, false, false, false];
+  double height = 60;
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Container(
-      height: 60,
-      // color: Colors.transparent,
-      color: Color.fromRGBO(33, 37, 41, 1), // Keep AppBar transparent
-      // color: Colors.amber, // Keep AppBar transparent
+      height: height,
+      color: Color.fromRGBO(33, 37, 41, 1), // Keep AppBar color consistent
       child: width > 600
           ? Row(
-              // mainAxisAlignment: MainAxisAlignment.end,
               children: _supportNavbar(),
             )
-          : ListView(
-              children: _supportNavbar(),
-              scrollDirection: Axis.horizontal,
+          : Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Add the logo on the left side
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/clublogo.png"),
+                      ),
+                    ),
+                  ),
+                ),
+                // Hamburger icon on smaller screens
+                IconButton(
+                  icon: Icon(Icons.menu, color: Colors.white),
+                  onPressed: () {
+                    // setState(() {
+                    //   height = 300;
+                    // });
+                    Scaffold.of(context).openDrawer();
+                  },
+                ),
+              ],
             ),
     );
   }

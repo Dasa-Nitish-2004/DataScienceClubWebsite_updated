@@ -2,12 +2,13 @@ import 'package:ds_web/widgets/HomeScreen/AnimatedInfo.dart';
 import 'package:ds_web/widgets/Navbar.dart';
 import 'package:ds_web/widgets/SignInWidget.dart';
 import 'package:ds_web/widgets/adminContent.dart';
+import 'package:ds_web/widgets/drawer.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:lottie/lottie.dart';
+// import 'package:lottie/lottie.dart';
 
 class AdminPage extends StatefulWidget {
   const AdminPage({super.key});
@@ -31,6 +32,7 @@ class _AdminPageState extends State<AdminPage> {
     // _signoutuser();
 
     return Scaffold(
+      drawer: openedDrawer(context),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

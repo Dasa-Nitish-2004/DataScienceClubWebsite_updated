@@ -1,7 +1,7 @@
 import 'package:ds_web/services/pushEvent.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+// import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:lottie/lottie.dart';
 import 'package:intl/intl.dart';
@@ -135,7 +135,9 @@ class _EventCreationPageState extends State<EventCreationPage> {
             "venue": venueController.text,
             "description": "<pre>${EventDescriptionController.text}</pre>",
             // "description": EventDescriptionController.text,
-            "registeredStudents": {},
+            "registeredStudents": {
+              "Dasa Nitish": {"name": "Dasa Nitish"}
+            },
             "postedDate": formatter.format(DateTime.now()),
             "lastDate": widget.lastdate,
             "eventDate": widget.eventdate,

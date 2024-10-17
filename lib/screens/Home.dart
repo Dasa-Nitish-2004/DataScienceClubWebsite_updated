@@ -3,8 +3,10 @@ import 'package:ds_web/widgets/HomeScreen/Captions.dart';
 import 'package:ds_web/widgets/HomeScreen/HomeCarousel.dart';
 import 'package:ds_web/widgets/Navbar.dart';
 import 'package:ds_web/widgets/HomeScreen/SpecialThanking.dart';
+import 'package:ds_web/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+// import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
   List<Widget> detailsWidget = [];
@@ -33,6 +35,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     populate();
     return Scaffold(
+      drawer: openedDrawer(context),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

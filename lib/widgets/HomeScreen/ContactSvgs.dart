@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:url_launcher/url_launcher.dart';
+// import 'package:url_launcher/url_launcher.dart';
 import 'package:ds_web/services/urlLaunching.dart' as launch;
-import 'package:http/http.dart' as http;
+// import 'package:http/http.dart' as http;
 
 class ContactSvgsRow extends StatelessWidget {
   Map<String, String> details;

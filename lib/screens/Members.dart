@@ -1,6 +1,7 @@
 import 'package:ds_web/widgets/HomeScreen/AnimatedInfo.dart';
 import 'package:ds_web/widgets/MemberProfile.dart';
 import 'package:ds_web/widgets/Navbar.dart';
+import 'package:ds_web/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 class MembersPage extends StatelessWidget {
@@ -68,6 +69,7 @@ class MembersPage extends StatelessWidget {
   Widget build(BuildContext context) {
     _populateMembers();
     return Scaffold(
+      drawer: openedDrawer(context),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

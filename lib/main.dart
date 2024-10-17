@@ -4,7 +4,7 @@ import 'package:ds_web/screens/AdminPage.dart';
 import 'package:ds_web/screens/Events.dart';
 import 'package:ds_web/screens/Home.dart';
 import 'package:ds_web/screens/Members.dart';
-import 'package:ds_web/widgets/retriveImage.dart';
+// import 'package:ds_web/widgets/retriveImage.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -22,10 +22,17 @@ class MyApp extends StatelessWidget {
   final GoRouter _router = GoRouter(
     routes: [
       GoRoute(
-        path: '/reg',
-        builder: (context, state) => EventRegistrationForm(),
-        // builder: (context, state) => ImageScreen(),
-      ),
+          path: '/reg/:id',
+          builder: (context, state) {
+            final id = state.pathParameters['id'];
+            final desc = state.queryParameters["desc"] ?? "<pre> </pre>";
+            return EventRegistrationForm(
+              eventName: id,
+              desc: desc.substring(5, desc.length - 6).trim(),
+            );
+          }
+          // builder: (context, state) => ImageScreen(),
+          ),
       GoRoute(
         path: '/',
         builder: (context, state) => HomePage(),
